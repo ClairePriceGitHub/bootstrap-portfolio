@@ -1,11 +1,14 @@
 
 :root {
-    --primary-color: #303030;
+    --color-primary: rgb(228, 213, 187);
+    --color-secondary: #333333;
+    --color-tertiary: white;
     --text-color-light: white;
+    --text-color-dark: black;
 }
 
 body {
-    background-color:rgba(245, 222, 179, 0.463);
+    background-color: var(--color-primary);
     font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
@@ -27,14 +30,35 @@ h1 {
     font-size: 6rem;
   }
 h2 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
+h3 {
+    font-size: 4rem;
+}
+h4 {
+    font-size: 3rem;
+}
+h5 {
+    font-size: 2rem;
+}
+h6 {
+    font-size: 1.5rem;
+}
+p {
+    font-size: 1rem;
+}
 
 .navbar {
     background-color: rgba(255, 255, 255, 0) !important;
     height: 100px;
     z-index: 2;
+    justify-content: center !important;
 }
+
+.navbar-container {
+    justify-items: center;
+}
+
 
 /*
 .nav-item .nav-link a:link,
@@ -44,8 +68,6 @@ h2 {
 }
 */
 
-
-
 .hero-banner img {
     width: 100%;
     height: calc(100vh - 25px);
@@ -53,58 +75,95 @@ h2 {
     object-fit: cover;
     margin-top: -100px;
     z-index: 1;
-    
-    
 }
 
-.mugshot-container {
-    align-items: center;
-    width: 80%;
-    height: calc(100vh - 25px);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "mugshot-text mugshot-photo";
+.hero-banner .card-container {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.mugshot-text {
-    grid-area: mugshot-text;
-    position: relative;
-    text-align: right;
-    padding-right: 30px;
-}
-
-.mugshot-photo {
-    grid-area: mugshot-photo;
-    
-}
-
-.mugshot-container img {
-    position: relative;
-    width: 90%;
-    height: auto;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    filter: grayscale(100%);
-    opacity: 80%;
-    align-items: start;
-}
-
-.mugshot-container h2 {
-    text-align: right;
-    padding: 0px 50px;
-}
-
-
-
-
-
-
-
-.section-title {
+.hero-banner .card-body {
+    top: 50%;
+    transform: translateY(35%);
     text-align: center;
 }
+
+.hero-banner .card-hero {
+    background-color: var(--color-secondary);
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    height: 70vh;
+    animation-name: color-change;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+}
+
+.hero-banner h3 {
+    color: var(--text-color-light);
+    animation-name: color-change-text;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+}
+
+@-webkit-keyframes color-change {
+    0% {background-color: var(--color-secondary);}
+    50% {background-color: var(--color-primary);}
+    100% {background-color: var(--color-secondary);}
+}
+
+@-webkit-keyframes color-change-text {
+    0% {color: var(--text-color-light);}
+    50% {color: var(--text-color-dark);}
+    100% {color: var(--text-color-light);}
+}
+
+
+/* Skill Section */
+
+
+.skill-wrapper {
+    width: 100%;
+    background-color: var(--color-secondary);
+    padding: 100px 10%;
+}
+
+.card-skill {
+    padding: 30px;
+}
+
+.card-skill .card-container {
+    background-color: var(--color-primary);
+    aspect-ratio: 1/1;
+    border: none;
+    color: var(--text-color-dark);
+    text-align: center;
+    border-radius: 50% ;
+    
+    
+}
+
+.card-skill .card-body {
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    top: 50%;
+    transform: translateY(33%);
+   
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -135,59 +194,93 @@ h2 {
 .card-img {
     aspect-ratio: 1/1;
     border-radius: 50% ;
-    filter: opacity(60%);
-    filter: grayscale(100%);
+    filter: opacity(40%);
+    background-color: white;
+    
     
 }
 
-.card-img:hover {
-    filter: grayscale(50%);
-}
+
 
 .card-work .card-content {
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
     padding: 30px;
-    width: 60%;
-}
-
-.card-work .card-content {
+    width: 100%;
     justify-items: center;
 }
 
-
-/* Skill Section */
-
-
-.skill-wrapper {
-    margin-top: 80px;
-    width: 80%;
-    
-}
-
-.card-skill .card-container {
-    background-color: var(--primary-color);
-    aspect-ratio: 1/1;
-    border: none;
+.card-work .card-title {
     color: var(--text-color-light);
-    text-align: center;
-    border-radius: 50% ;
+}
+
+/* Work Section Effects */
+.card-img:hover {
+    filter: grayscale(0%);
+    filter: opacity(100%);
+}
+
+.card-work .card-container:hover .card-title,
+.card-work .card-container:hover .card-text {
+   color: var(--text-color-dark);
+}
+
+.card-work .card-body:hover .card-img,
+.card-work h2:hover .card-img,
+.card-work .card-text:hover .card-img,
+.card-work .card-content:hover .card-work .card-img {
+    filter: grayscale(40%);
+    filter: opacity(100%);
+}
+
+
+
+
+
+
+/* About Section */
+.mugshot-container {
+    background-color: var(--color-secondary);
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 25px);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "mugshot-text mugshot-photo";
+}
+
+.mugshot-text {
+    color: var(--text-color-light);
+    grid-area: mugshot-text;
+    position: relative;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.mugshot-photo {
+    grid-area: mugshot-photo;
     
 }
 
-.card-skill .card-body {
-    text-align: center;
-    align-self: center;
-    justify-self: center;
-    top: 50%;
-    transform: translateY(33%);
-   
+.mugshot-container img {
+    position: relative;
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    opacity: 80%;
+    align-items: start;
 }
 
-.card-skill .card-text {
-    
+.mugshot-container h2 {
+    text-align: right;
+    padding: 0px 50px;
 }
+
 
 
 /* Contact Section */
