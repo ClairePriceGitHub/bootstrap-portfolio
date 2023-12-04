@@ -27,25 +27,25 @@ p {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 6vw, 6rem);
   }
 h2 {
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 6rem);
   }
 h3 {
-    font-size: 4rem;
+    font-size: clamp(2rem, 4.5rem, 5rem);
 }
 h4 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 4rem);
 }
 h5 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
 }
 h6 {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 p {
-    font-size: 1rem;
+    font-size: 1 rem;
 }
 
 
@@ -138,13 +138,11 @@ p {
 
 .card-skill .card-body {
     text-align: center;
-    align-self: center;
-    justify-self: center;
     top: 50%;
-    transform: translateY(33%);
+    transform: translateY(25%);
 }
 
-/* Work Section */
+/* WORK SECTION */
 
 .work-wrapper {
     width: 80%;
@@ -212,12 +210,12 @@ p {
     text-align: right;
     padding-left: 10%;
     padding-right: 10%;
-    max-height: calc(100vh - 25px);
+    height: calc(100vh - 25px);
     align-content: center;
 }
 
 .about-container {
-    max-height: calc(100vh - 25px);
+    height: calc(100vh - 25px);
     align-items: center;
 }
 
@@ -240,7 +238,7 @@ p {
     opacity: 60%;
 }
 
-/* Contact Section */
+/* CONTACT SECTION */
 
 .contact-wrapper {
     width: 80%;
@@ -266,30 +264,44 @@ p {
     transform: scale(1.2);
 }
 
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+    .card-skill {
+        padding: 20px; 
+    }
+
+    .card-skill .card-body {
+        transform: translateY(20%);
+    }
+}
 
 @media screen and (max-width: 1024px) {
-    h1 {
-        font-size: 3rem;
-      }
-    h2 {
-        font-size: 3rem;
-      }
-    h3 {
-        font-size: 2.5rem;
+    .about-wrapper {
+        height: 80vh;
     }
-    h4 {
-        font-size: 2rem;
+    
+    .about-container {
+        height: 80vh;
     }
-    h5 {
-        font-size: 1.5rem;
+    
+    .about-image-container {
+        padding-left: 30px;
     }
-    h6 {
-        font-size: 1rem;
-    }
-    p {
-        font-size: 1rem;
+   
+    .card-skill {
+        padding: 10px; 
     }
 
+    .card-skill .card-body {
+        top: 50%;
+        transform: translateY(18%);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+/*
     .hero-banner .card-body {
         top: 50%;
         transform: translateY(32%);
@@ -298,9 +310,24 @@ p {
     .hero-banner h3 {
         font-size: 4rem;
     }
+*/
+.about-wrapper {
+    height: 90vh;
+}
 
+.about-container {
+    height: 90vh;
+    padding: 20px;
+}
 
-    /* Skill Section */
+.about-container h4 {
+    text-align: center;
+}
+
+.about-image-container {
+    padding: 30px;
+}
+    
     .card-skill {
         padding: 10px; 
     }
@@ -310,51 +337,25 @@ p {
         transform: translateY(5%);
     }
 
-
-
-    @media screen and (max-width: 768px) {
-        h1 {
-            font-size: 5rem;
-          }
-        h2 {
-            font-size: 3rem;
-          }
-        h3 {
-            font-size: 2.5rem;
-        }
-        h4 {
-            font-size: 2rem;
-        }
-        h5 {
-            font-size: 1.5rem;
-        }
-        h6 {
-            font-size: 1rem;
-        }
-        p {
-            font-size: 1rem;
-        }
-    
-        .hero-banner .card-body {
-            top: 50%;
-            transform: translateY(32%);
-        }
-    
-        .hero-banner h3 {
-            font-size: 4rem;
-        }
-    
-    
-        /* Skill Section */
-        .card-skill {
-            padding: 10px; 
-        }
-    
-        .card-skill .card-body {
-            top: 50%;
-            transform: translateY(5%);
-        }
-
+    .card-work .card-container:hover {
+        transform: scale(1.03);
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .card-skill {
+        padding: 10px; 
+    }
+
+    .card-skill .card-body {
+        top: 50%;
+        transform: translateY(35%);
+    }
+
+    .card-work .card-container:hover {
+        transform: scale(1.03);
+    }
+}
+
 
 
