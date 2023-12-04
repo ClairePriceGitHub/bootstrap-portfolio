@@ -163,10 +163,6 @@ p {
     border: none;
 }
 
-.card-work .card-container:hover {
-    transform: scale(1.1);
-}
-
 .card-img {
     aspect-ratio: 1/1;
     border-radius: 50% ;
@@ -188,6 +184,10 @@ p {
 }
 
 /* Work Section Effects */
+.card-work .card-container:hover {
+    transform: scale(1.1);
+}
+
 .card-img:hover {
     filter: grayscale(0%);
     filter: opacity(100%);
@@ -198,11 +198,8 @@ p {
    color: var(--text-color-dark);
 }
 
-.card-work .card-body:hover .card-img,
-.card-work h2:hover .card-img,
-.card-work .card-text:hover .card-img,
-.card-work .card-content:hover .card-work .card-img {
-    filter: grayscale(40%);
+.card-container:hover .card-img {
+    filter: grayscale(0%);
     filter: opacity(100%);
 }
 
@@ -212,7 +209,7 @@ p {
     width: 100%;
     background-color: var(--color-secondary);
     color: var(--text-color-light);
-    text-align: right;
+    text-align: center;
     padding-left: 10%;
     padding-right: 10%;
     height: calc(100vh - 25px);
@@ -263,6 +260,10 @@ p {
 
 .icon img {
     max-height: 70px;
+}
+
+.icon img:hover {
+    transform: scale(1.2);
 }
 
 
