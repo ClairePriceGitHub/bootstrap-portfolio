@@ -48,6 +48,7 @@ p {
     font-size: 1rem;
 }
 
+
 .navbar {
     background-color: rgba(255, 255, 255, 0) !important;
     height: 100px;
@@ -58,15 +59,6 @@ p {
 .navbar-container {
     justify-items: center;
 }
-
-
-/*
-.nav-item .nav-link a:link,
-.nav-link a:visited {
-  color: white;
-  padding: 3px 10px;
-}
-*/
 
 .hero-banner img {
     width: 100%;
@@ -122,9 +114,7 @@ p {
     100% {color: var(--text-color-light);}
 }
 
-
 /* Skill Section */
-
 
 .skill-wrapper {
     width: 100%;
@@ -153,19 +143,8 @@ p {
     transform: translateY(33%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Work Section */
+
 .work-wrapper {
     width: 80%;
     margin-top: 50px;
@@ -185,7 +164,6 @@ p {
 
 .card-work .card-container:hover {
     transform: scale(1.1);
-    
 }
 
 .card-img {
@@ -193,11 +171,7 @@ p {
     border-radius: 50% ;
     filter: opacity(40%);
     background-color: white;
-    
-    
 }
-
-
 
 .card-work .card-content {
     text-align: center;
@@ -230,11 +204,6 @@ p {
     filter: grayscale(40%);
     filter: opacity(100%);
 }
-
-
-
-
-
 
 /* About Section */
 
@@ -272,51 +241,8 @@ p {
     filter: grayscale(100%);
 }
 
-
-
-/*
-.mugshot-container {
-    background-color: var(--color-secondary);
-    align-items: center;
-    width: 80%;
-    height: calc(100vh - 25px);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "mugshot-text mugshot-photo";
-}
-
-.mugshot-text {
-    color: var(--text-color-light);
-    grid-area: mugshot-text;
-    position: relative;
-    text-align: right;
-    padding: 0px 50px;
-}
-
-.mugshot-photo {
-    grid-area: mugshot-photo;
-    
-}
-
-.mugshot-container img {
-    position: relative;
-    width: 90%;
-    height: auto;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    filter: grayscale(100%);
-    opacity: 80%;
-   align-items: center;
-   justify-content: center;
-}
-
-*/
-
-
-
 /* Contact Section */
+
 .contact-wrapper {
     width: 80%;
 }
