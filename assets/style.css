@@ -1,3 +1,4 @@
+/* GENERAL STYLES */
 
 :root {
     --color-primary: rgb(228, 213, 187);
@@ -7,6 +8,7 @@
     --text-color-dark: black;
 }
 
+/* Text */
 body {
     background-color: var(--color-primary);
     font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
@@ -48,6 +50,7 @@ p {
     font-size: clamp(0.5rem, 1.5vw, 1rem);
 }
 
+/* NAVIGATION */
 
 .navbar {
     background-color: rgba(255, 255, 255, 0) !important;
@@ -59,6 +62,8 @@ p {
 .navbar-container {
     justify-items: center;
 }
+
+/* HERO SECTION */
 
 .hero-banner img {
     width: 100%;
@@ -114,7 +119,7 @@ p {
     100% {color: var(--text-color-light);}
 }
 
-/* Skill Section */
+/* SKILLS SECTIONS */
 
 .skill-wrapper {
     width: 100%;
@@ -142,7 +147,7 @@ p {
     transform: translateY(25%);
 }
 
-/* WORK SECTION */
+/* WORK SECTIONS */
 
 .work-wrapper {
     width: 80%;
@@ -164,7 +169,8 @@ p {
 .card-img {
     aspect-ratio: 1/1;
     border-radius: 50% ;
-    filter: opacity(40%);
+    filter: opacity(70%);
+    filter: grayscale(60%);
     background-color: white;
 }
 
@@ -177,8 +183,9 @@ p {
     justify-items: center;
 }
 
-.card-work .card-title {
-    color: var(--text-color-light);
+.card-work .card-title,
+.card-work .card-text {
+    color: var(--text-color-dark);
 }
 
 /* Work Section Effects */
@@ -186,11 +193,9 @@ p {
     transform: scale(1.1);
 }
 
-
-
 .card-work .card-container:hover .card-title,
 .card-work .card-container:hover .card-text {
-   color: var(--text-color-dark);
+   color: var(--text-color-light);
 }
 
 .card-container:hover .card-img {
@@ -198,7 +203,7 @@ p {
     filter: opacity(100%);
 }
 
-/* About Section */
+/* ABOUT SECTION */
 
 .about-wrapper {
     width: 100%;
@@ -223,7 +228,6 @@ p {
 .about-image {
     border-radius: 50%;
     border: none;
-    
 }
 
 .about-image img {
@@ -278,6 +282,7 @@ p {
         top: 50%;
         transform: translateY(30%);
     }
+
     .about-wrapper {
         height: 80vh;
     }
@@ -366,9 +371,9 @@ p {
 @media screen and (max-width: 480px) {
     h3 {
         font-size: clamp(2rem, 2vw, 3rem);
-      }
+    }
     h5 {
-    font-size: clamp(2.5rem, 3vw, 3rem);
+    font-size: clamp(2rem, 3vw, 3rem);
     }
     p {
     font-size: clamp(1rem, 1vw, 2rem);
