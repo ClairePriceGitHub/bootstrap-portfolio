@@ -209,15 +209,15 @@ p {
     width: 100%;
     background-color: var(--color-secondary);
     color: var(--text-color-light);
-    text-align: center;
+    text-align: right;
     padding-left: 10%;
     padding-right: 10%;
-    height: calc(100vh - 25px);
+    max-height: calc(100vh - 25px);
     align-content: center;
 }
 
 .about-container {
-    height: calc(100vh - 25px);
+    max-height: calc(100vh - 25px);
     align-items: center;
 }
 
@@ -267,6 +267,94 @@ p {
 }
 
 
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+      }
+    h2 {
+        font-size: 3rem;
+      }
+    h3 {
+        font-size: 2.5rem;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 1.5rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 
+    .hero-banner .card-body {
+        top: 50%;
+        transform: translateY(32%);
+    }
+
+    .hero-banner h3 {
+        font-size: 4rem;
+    }
+
+
+    /* Skill Section */
+    .card-skill {
+        padding: 10px; 
+    }
+
+    .card-skill .card-body {
+        top: 50%;
+        transform: translateY(5%);
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 5rem;
+          }
+        h2 {
+            font-size: 3rem;
+          }
+        h3 {
+            font-size: 2.5rem;
+        }
+        h4 {
+            font-size: 2rem;
+        }
+        h5 {
+            font-size: 1.5rem;
+        }
+        h6 {
+            font-size: 1rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    
+        .hero-banner .card-body {
+            top: 50%;
+            transform: translateY(32%);
+        }
+    
+        .hero-banner h3 {
+            font-size: 4rem;
+        }
+    
+    
+        /* Skill Section */
+        .card-skill {
+            padding: 10px; 
+        }
+    
+        .card-skill .card-body {
+            top: 50%;
+            transform: translateY(5%);
+        }
+
+}
 
 
