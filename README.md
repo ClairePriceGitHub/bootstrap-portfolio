@@ -18,11 +18,20 @@ N/A
 
 Navigation bar links to sections with different information within the page. Placeholder project images are setup with links, ready to be modified, as future projects are completed. Links to email (currently set as placeholder), GitHub repository and Linkedin profile open in a new tab.
 
+https://clairepricegithub.github.io/bootstrap-portfolio/
+
 ![screenshot](images/screenshot.png)
 
 ## Credits
 
+index.html lines 200-202: <br>
+Koishigawa, Kris. 2020, September 8. *How to Use HTML to Open a Link in a New Tab*. freeCodeCamp. https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/ 
 
+style.css Lines 110-120: <br>
+McQuarrie, Tom. (2013, September 3). *Change color with css over time back and forth*. Stack Overflow. https://stackoverflow.com/questions/18582555/change-color-with-css-over-time-back-and-forth
+
+style.css Lines 202: <br>
+Moss, Anthony. (no date). *Cool grayscale hover effect*. Code Pen. https://codepen.io/AnthonyMoss/pen/RwwyQQ 
 
 ## License
 
