@@ -45,7 +45,7 @@ h6 {
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 p {
-    font-size: 1 rem;
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
 }
 
 
@@ -186,10 +186,7 @@ p {
     transform: scale(1.1);
 }
 
-.card-img:hover {
-    filter: grayscale(0%);
-    filter: opacity(100%);
-}
+
 
 .card-work .card-container:hover .card-title,
 .card-work .card-container:hover .card-text {
@@ -197,7 +194,7 @@ p {
 }
 
 .card-container:hover .card-img {
-    filter: grayscale(0%);
+    filter: grayscale(100%);
     filter: opacity(100%);
 }
 
@@ -277,6 +274,10 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
+    .hero-banner .card-body {
+        top: 50%;
+        transform: translateY(30%);
+    }
     .about-wrapper {
         height: 80vh;
     }
@@ -299,34 +300,48 @@ p {
     }
 }
 
-
 @media screen and (max-width: 768px) {
-/*
+    h3 {
+        font-size: clamp(4rem, 4vw, 5rem);
+      }
+    h5 {
+    font-size: clamp(2.5rem, 3vw, 3rem);
+    }
+    p {
+    font-size: clamp(1rem, 1vw, 2rem);
+    }
+
     .hero-banner .card-body {
         top: 50%;
         transform: translateY(32%);
     }
 
-    .hero-banner h3 {
-        font-size: 4rem;
+    .hero-banner .card-hero {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1/1;
     }
-*/
-.about-wrapper {
-    height: 90vh;
-}
 
-.about-container {
-    height: 90vh;
-    padding: 20px;
-}
+    .about-wrapper {
+        height: 100vh;
+    }
 
-.about-container h4 {
-    text-align: center;
-}
+    .about-container {
+        height: 90vh;
+        padding: 20px;
+    }
 
-.about-image-container {
-    padding: 30px;
-}
+    .about-container h4 {
+        text-align: center;
+    }
+
+    .about-image {
+        height: 80%;
+    }
+
+    .about-image-container {
+        padding: 30px;
+    }
     
     .card-skill {
         padding: 10px; 
@@ -334,7 +349,7 @@ p {
 
     .card-skill .card-body {
         top: 50%;
-        transform: translateY(5%);
+        transform: translateY(35%);
     }
 
     .card-work .card-container:hover {
@@ -342,14 +357,41 @@ p {
     }
 }
 
+@media screen and (max-width: 620px) {
+    h3 {
+        font-size: clamp(3rem, 3vw, 4rem);
+      }
+    }
+
 @media screen and (max-width: 480px) {
+    h3 {
+        font-size: clamp(2rem, 2vw, 3rem);
+      }
+    h5 {
+    font-size: clamp(2.5rem, 3vw, 3rem);
+    }
+    p {
+    font-size: clamp(1rem, 1vw, 2rem);
+    }
+
+    .hero-banner .card-body {
+        top: 50%;
+        transform: translateY(32%);
+    }
+
+    .hero-banner .card-hero {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
     .card-skill {
         padding: 10px; 
     }
 
     .card-skill .card-body {
         top: 50%;
-        transform: translateY(35%);
+        transform: translateY(25%);
     }
 
     .card-work .card-container:hover {
